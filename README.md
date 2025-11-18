@@ -59,7 +59,7 @@ module bcd_to_7segment(
 
 always @(*) 
 begin
-    an <= 4'b1110;
+    an <= 4'b0111;
     case (bcd)
         4'b0000: seg = 7'b1000000;
         4'b0001: seg = 7'b1111001;
@@ -76,7 +76,6 @@ begin
 end
 
 endmodule
-
 ```
 ## Constraint file for Seven-Segment Display
 ```
@@ -103,9 +102,6 @@ set_property -dict { PACKAGE_PIN C7 IOSTANDARD LVCMOS33 } [get_ports {an[2]}]
 set_property -dict { PACKAGE_PIN A8 IOSTANDARD LVCMOS33 } [get_ports {an[3]}]
 ```
 ## FPGA Implementation Output
-
-<img width="782" height="540" alt="image" src="https://github.com/user-attachments/assets/6d549830-34b0-4916-9370-fc680e71f881" />
-
 
 ---
 
